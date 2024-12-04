@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.main {
+  padding: 0.5rem 0 1rem 0;
+  width: 1260px;
+  margin: auto;
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 1rem 0;
+
+  &__wrapper {
+    width: 1260px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 350px 1fr;
+  }
+
+  &__logo {
+    height: 25px;
+    width: fit-content;
+    
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__auth-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+
+    &__item {
+      &--link {
+        color: #000;
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+}
+
+.section__title {
+  margin-bottom: 1.5rem;
+  color: #c45fa5;
+}
+
+.section__row {
+  display: flex;
+  gap: 1rem;
+}
+
+.section__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__button {
+  width: 200px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: linear-gradient(45deg, #eda35a 0%, #a831d8 100%);
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.section__input {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  height: 40px;
+  width: 300px;
+  padding: 0 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f7;
+  border: 1px solid #cbcbcb;
+}
+
+.button__download {
+  margin: auto;
+  color: #fff;
+  width: fit-content;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #eda35a 0%, #a831d8 100%);
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.compare {
+  padding: 5% 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, #eda35a83 0%, #aa31da2c 100%);
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & .section__row {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  & .section__input {
+    width: 450px;
+  }
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 10px;
+}
+
+table th {
+  background-color: #c45fa5;
+  color: white;
+  padding: 16px;
+}
+
+.footer {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.319);
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+
+  &__copyright {
+    font-size: 14px;
+  }
+}
+
+.statistics {
+  margin-top: 2rem;
+}
+
+select {
+  color: #757575;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 0;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.wrapperInput {
+  width: 300px;
+  position: relative;
+  border-radius: 2px;
+
+  & .inputArrow {
+    width: 18px;
+    height: 18px;
+    font-size: 1rem;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+  
+    & > img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+  }    
+}
+
+.statistics {
+  border-top: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
+  padding: 80px 20px;
+  border-radius: 0;
+  box-shadow: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .statisctics-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  & label {
+    width: 100%;
+  }
+
+  & .section__button {
+    margin-top: 1rem;
+  }
+}
+
+.statistics__select {
+  margin: .5rem 0 1rem 0;
+}
