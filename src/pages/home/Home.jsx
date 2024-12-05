@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./../../components/layout/Layout";
-import { Download } from "lucide-react";
+import { Download, Import } from "lucide-react";
 import arrowDown from "../../assets/arrowDown.svg";
 
 const Home = () => {
@@ -190,6 +190,9 @@ const Home = () => {
           </div>
           <button className="button__download" id="export-button">
             <Download color="white" size={30} /> Экспортировать в XLSX
+          </button>
+          <button className="button__download" id="export-button">
+            <Import color="white" size={30} /> Импортировать XLSX
           </button>
           <section className="statistics">
             <h2 className="section__title">Статистика для преподавателя</h2>
