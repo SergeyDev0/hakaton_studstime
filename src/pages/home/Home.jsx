@@ -188,7 +188,7 @@ const Home = () => {
               </tbody>
             </table>
           </div>
-          <button className="button__download" id="export-button">
+          <button className="button__download" id="export-button" style={{ marginBottom: "32px"}}>
             <Download color="white" size={30} /> Экспортировать в XLSX
           </button>
           <button className="button__download" id="export-button">
