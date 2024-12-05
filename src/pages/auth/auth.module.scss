@@ -33,7 +33,7 @@
     margin: 15px 0 5px 0;
 }
 
-.container button {
+.container button, .container .signButton {
     border-radius: 20px;
     border: 1px solid #C45FA5;
     background-color: #C45FA5;
@@ -46,11 +46,11 @@
     transition: transform 80ms ease-in;
 }
 
-.container button:active {
+.container button:active, .container .signButton:active {
     transform: scale(0.95);
 }
 
-.container button:focus {
+.container button:focus, .container .signButton:focus {
     outline: none;
 }
 
