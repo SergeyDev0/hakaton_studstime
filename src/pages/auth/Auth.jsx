@@ -129,7 +129,7 @@ const Auth = observer(() => {
                         />
                         <Link to="/"
                             className={`${styles.signButton} ${styles.reg}`}
-                            onClick={(e) => {setIsClick(true); e.preventDefault()}}
+                            onClick={(e) => {setIsClick(true);}}
                         >
                             Зарегистрироваться
                         </Link>
@@ -167,7 +167,7 @@ const Auth = observer(() => {
                         <Link to="/reg">Забыли пароль?</Link>
                         <Link to="/"
                             className={styles.signButton}
-                            onClick={(e) => {setIsClick(true); e.preventDefault()}}
+                            onClick={(e) => {setIsClick(true)}}
                         >
                             Войти
                         </Link>
