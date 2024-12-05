@@ -127,13 +127,12 @@ const Auth = observer(() => {
                                 setPassword(e.target.value);
                             }}
                         />
-                        <button
+                        <Link to="/"
                             className={`${styles.signButton} ${styles.reg}`}
-                            onClick={() => setIsClick(true)}
-                            type="submit"
+                            onClick={(e) => {setIsClick(true); e.preventDefault()}}
                         >
                             Зарегистрироваться
-                        </button>
+                        </Link>
                         <div className={styles.mobileView}>
                             <p>Уже есть аккаунт?</p>
                             <button
@@ -166,13 +165,12 @@ const Auth = observer(() => {
                             placeholder="Пароль"
                         />
                         <Link to="/reg">Забыли пароль?</Link>
-                        <button
-                            type="submit"
+                        <Link to="/"
                             className={styles.signButton}
-                            onClick={() => setIsClick(true)}
+                            onClick={(e) => {setIsClick(true); e.preventDefault()}}
                         >
                             Войти
-                        </button>
+                        </Link>
 
                         <div className={styles.mobileView}>
                             <p>Нет аккаунта?</p>
