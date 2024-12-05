@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authStore from "../../stores/authStore";
 import { observer } from "mobx-react-lite";
+import Logo from "../../assets/logo1.svg"
 import styles from "./auth.module.scss";
 
 const Auth = observer(() => {
@@ -103,7 +104,7 @@ const Auth = observer(() => {
                     className={`${styles.formContainer} ${styles.signUpContainer}`}
                 >
                     <form onSubmit={postReg}>
-                        <img className={styles.logo} src={""} alt="Логотип" />
+                        <img className={styles.logo} src={Logo} alt="Логотип" />
                         <h1>Регистрация</h1>
                         <input
                             type="text"
@@ -148,7 +149,7 @@ const Auth = observer(() => {
                     className={`${styles.formContainer} ${styles.signInContainer}`}
                 >
                     <form onSubmit={postAuth}>
-                        <img className={styles.logo} src={""} alt="Логотип" />
+                        <img className={styles.logo} src={Logo} alt="Логотип" />
                         <h1>Войти</h1>
                         <input
                             onChange={(e) => {

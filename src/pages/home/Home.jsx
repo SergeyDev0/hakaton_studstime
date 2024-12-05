@@ -4,6 +4,7 @@ import { Download } from "lucide-react";
 import arrowDown from "../../assets/arrowDown.svg";
 
 const Home = () => {
+  const [isOpenCompare, setIsCompare] = React.useState(false);
   return (
     <Layout>
       <main className="main">
@@ -33,54 +34,160 @@ const Home = () => {
                   />
                 </div>
               </div>
-              <button className="section__button" type="submit">
+              <button
+                className="section__button"
+                type="submit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsCompare(true);
+                }}
+              >
                 Сравнить расписания
               </button>
             </form>
-            <div className="comparison-results"></div>
+            {isOpenCompare && (
+              <div className="comparison-results">
+                <div className="tableWrapper">
+                  <table className="table">
+                    <thead>
+                      <tr>
+                        <th>Время</th>
+                        <th>Предмет</th>
+                        <th>Преподаватель</th>
+                        <th>Группа</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="tableWrapper">
+                  <table className="table">
+                    <thead>
+                      <tr>
+                        <th>Время</th>
+                        <th>Предмет</th>
+                        <th>Преподаватель</th>
+                        <th>Группа</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                      <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Преподаватель 1</td>
+                        <td>Группа 1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+            {isOpenCompare && (
+              <button className="section__button" onClick={(e) => {
+                e.preventDefault();
+                setIsCompare(false);
+              }}>Закрыть</button>
+            )}
           </section>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Время</th>
-                <th>Предмет</th>
-                <th>Преподаватель</th>
-                <th>Группа</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>09:00 - 10:30</td>
-                <td>Математика</td>
-                <td>Преподаватель 1</td>
-                <td>Группа 1</td>
-              </tr>
-              <tr>
-                <td>09:00 - 10:30</td>
-                <td>Математика</td>
-                <td>Преподаватель 1</td>
-                <td>Группа 1</td>
-              </tr>
-              <tr>
-                <td>09:00 - 10:30</td>
-                <td>Математика</td>
-                <td>Преподаватель 1</td>
-                <td>Группа 1</td>
-              </tr>
-              <tr>
-                <td>09:00 - 10:30</td>
-                <td>Математика</td>
-                <td>Преподаватель 1</td>
-                <td>Группа 1</td>
-              </tr>
-              <tr>
-                <td>09:00 - 10:30</td>
-                <td>Математика</td>
-                <td>Преподаватель 1</td>
-                <td>Группа 1</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="tableWrapper">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Время</th>
+                  <th>Предмет</th>
+                  <th>Преподаватель</th>
+                  <th>Группа</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>09:00 - 10:30</td>
+                  <td>Математика</td>
+                  <td>Преподаватель 1</td>
+                  <td>Группа 1</td>
+                </tr>
+                <tr>
+                  <td>09:00 - 10:30</td>
+                  <td>Математика</td>
+                  <td>Преподаватель 1</td>
+                  <td>Группа 1</td>
+                </tr>
+                <tr>
+                  <td>09:00 - 10:30</td>
+                  <td>Математика</td>
+                  <td>Преподаватель 1</td>
+                  <td>Группа 1</td>
+                </tr>
+                <tr>
+                  <td>09:00 - 10:30</td>
+                  <td>Математика</td>
+                  <td>Преподаватель 1</td>
+                  <td>Группа 1</td>
+                </tr>
+                <tr>
+                  <td>09:00 - 10:30</td>
+                  <td>Математика</td>
+                  <td>Преподаватель 1</td>
+                  <td>Группа 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <button className="button__download" id="export-button">
             <Download color="white" size={30} /> Экспортировать в XLSX
           </button>
@@ -89,7 +196,7 @@ const Home = () => {
             <form className="statisctics-form" id="statisctics-form">
               <label htmlFor="group1">ФИО преподавателя</label>
               <div className="wrapperInput">
-                <select 
+                <select
                   className="statistics__select"
                   id="nameTeacher"
                   name="name"
@@ -98,10 +205,19 @@ const Home = () => {
                   <option disabled selected value="none">
                     Иванов Иван Иванович
                   </option>
-                  <option value="option1">До 14 лет</option>
-                  <option value="option1">14-16 лет</option>
-                  <option value="option2">16-18 лет</option>
-                  <option value="option2">От 18 лет</option>
+                  <option value="option1">Николаенко Ксения Сергеевна</option>
+                  <option value="option2">Родионов Владимир Иванович</option>
+                  <option value="option3">Еременко Мария Петровна</option>
+                  <option value="option4">Еремина Ирина Владимировна</option>
+                  <option value="option5">Артемов Сергей Владимирович</option>
+                  <option value="option6">Николаенко Ирина Данииловна</option>
+                  <option value="option7">Буценко Елена Васильевна</option>
+                  <option value="option8">Волошина Татьяна Карповна</option>
+                  <option value="option9">Волков Владимир Викторович</option>
+                  <option value="option10">
+                    Секацкая Галина Александровна
+                  </option>
+                  <option value="option11">Сорокина Наталья Борисовна</option>
                 </select>
                 <div className="inputArrow">
                   <img src={arrowDown} />

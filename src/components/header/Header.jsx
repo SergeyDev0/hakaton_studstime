@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo1.svg"
-import SearchBar from "../../pages/searchBar/SearchBar";
+import SearchBar from "../searchBar/SearchBar"
 import { LogIn, LogOut } from "lucide-react";
 import Notification from "../notification/Notification";
 
@@ -13,7 +13,7 @@ const Header = () => {
         <div className="header__logo">
           <img src={Logo} alt="logo" />
         </div>
-        <SearchBar />
+        <div className="desktop"><SearchBar /></div>
         {!isAuth ? (
           <ul className="header__auth-list">
             <li className="header__auth-list__item">
@@ -40,6 +40,7 @@ const Header = () => {
           </ul>
         )}
       </div>
+      <div className="mobile"><SearchBar /></div>
     </header>
   );
 };
